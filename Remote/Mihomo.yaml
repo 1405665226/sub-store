@@ -69,6 +69,9 @@ dns:
     - '+.msftconnecttest.com'
     - '+.msftncsi.com'
     - '+.ts.net'
+    - "+.steamserver.net"
+    - "+.steamcontent.com"
+    - "+.steamcommunity.com"
   default-nameserver:
     - "223.5.5.5"
     - "119.29.29.29"
