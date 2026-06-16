@@ -2,7 +2,7 @@ mixed-port: 7890
 allow-lan: true
 bind-address: "*"
 mode: rule
-log-level: debug
+log-level: info
 unified-delay: false
 tcp-concurrent: true
 
@@ -50,7 +50,6 @@ tun:
     - 172.16.0.0/12
     - 127.0.0.0/8
     - 100.64.0.0/10
-    - 192.168.1.0/24
     - "fc00::/7"
     - "fe80::/10"
 
@@ -155,7 +154,7 @@ proxy-groups:
       type: select,
       proxies: [🇰🇷 韩国 🎯],
       include-all: true,
-      filter: "韩国
+      filter: "韩国"
     }
   - {
       name: 🇸🇬 新加坡,
@@ -237,7 +236,6 @@ rules:
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
   - IP-CIDR,100.64.0.0/10,DIRECT
-  - IP-CIDR,192.168.1.0/24,DIRECT
   - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
   - DOMAIN-SUFFIX,msftncsi.com,DIRECT
   - DOMAIN-SUFFIX,ts.net,DIRECT
