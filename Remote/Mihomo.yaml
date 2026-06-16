@@ -122,28 +122,64 @@ proxy-groups:
   - {
       name: 🚀 节点选择,
       type: select,
+      proxies: [🇭🇰 香港, 🇺🇸 美国, 🇯🇵 日本, 🇰🇷 韩国, 🇸🇬 新加坡, 🇨🇳 台湾, 其它, DIRECT]
+    }
+  - {
+      name: 🎮 游戏,
+      type: select,
       proxies: [🎯 自动选择, 👆🏻 手动选择, DIRECT]
     }
-  - {
-      name: 🎯 自动选择,
-      type: select,
-      proxies: [🌏 全部节点, 🇭🇰 香港, 🇺🇸 美国, 🇯🇵 日本, 🇰🇷 韩国, 🇸🇬 新加坡, 🇨🇳 台湾]
-    }
-  - {
-      name: 👆🏻 手动选择,
-      type: select,
-      include-all: true
-    }
-  - {
-      name: 🌏 全部节点,
-      type: url-test,
-      url: https://www.gstatic.com/generate_204,
-      interval: 300,
-      tolerance: 50,
-      include-all: true
-    }
+
   - {
       name: 🇭🇰 香港,
+      type: select,
+      proxies: [🇭🇰 香港 🎯],
+      include-all: true,
+      filter: "香港"
+    }
+  - {
+      name: 🇺🇸 美国,
+      type: select,
+      proxies: [🇺🇸 美国 🎯],
+      include-all: true,
+      filter: "美国"
+    }
+  - {
+      name: 🇯🇵 日本,
+      type: select,
+      proxies: [🇯🇵 日本 🎯],
+      include-all: true,
+      filter: "日本"
+    }
+  - {
+      name: 🇰🇷 韩国,
+      type: select,
+      proxies: [🇰🇷 韩国 🎯],
+      include-all: true,
+      filter: "韩国
+    }
+  - {
+      name: 🇸🇬 新加坡,
+      type: select,
+      proxies: [🇸🇬 新加坡 🎯],
+      include-all: true,
+      filter: "新加坡"
+    }
+  - {
+      name: 🇨🇳 台湾,
+      type: select,
+      proxies: [🇨🇳 台湾 🎯],
+      include-all: true,
+      filter: "台湾"
+    }
+  - {
+      name: 其它,
+      type: select,
+      include-all: true,
+      exclude-filter: "香港|美国|日本|韩国|新加坡|台湾"
+    }
+  - {
+      name: 🇭🇰 香港 🎯,
       type: url-test,
       url: https://www.gstatic.com/generate_204,
       interval: 300,
@@ -152,7 +188,7 @@ proxy-groups:
       filter: "香港"
     }
   - {
-      name: 🇺🇸 美国,
+      name: 🇺🇸 美国 🎯,
       type: url-test,
       url: https://www.gstatic.com/generate_204,
       interval: 300,
@@ -161,7 +197,7 @@ proxy-groups:
       filter: "美国"
     }
   - {
-      name: 🇯🇵 日本,
+      name: 🇯🇵 日本 🎯,
       type: url-test,
       url: https://www.gstatic.com/generate_204,
       interval: 300,
@@ -170,7 +206,7 @@ proxy-groups:
       filter: "日本"
     }
   - {
-      name: 🇰🇷 韩国,
+      name: 🇰🇷 韩国 🎯,
       type: url-test,
       url: https://www.gstatic.com/generate_204,
       interval: 300,
@@ -179,7 +215,7 @@ proxy-groups:
       filter: "韩国"
     }
   - {
-      name: 🇸🇬 新加坡,
+      name: 🇸🇬 新加坡 🎯,
       type: url-test,
       url: https://www.gstatic.com/generate_204,
       interval: 300,
@@ -188,7 +224,7 @@ proxy-groups:
       filter: "新加坡"
     }
   - {
-      name: 🇨🇳 台湾,
+      name: 🇨🇳 台湾 🎯,
       type: url-test,
       url: https://www.gstatic.com/generate_204,
       interval: 300,
@@ -206,6 +242,11 @@ rules:
   - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
   - DOMAIN-SUFFIX,msftncsi.com,DIRECT
   - DOMAIN-SUFFIX,ts.net,DIRECT
+  - DOMAIN-KEYWORD,steam,🎮 游戏
+  - DOMAIN-KEYWORD,xbox,🎮 游戏
+  - DOMAIN-KEYWORD,ea,🎮 游戏
+  - DOMAIN-KEYWORD,forza,🎮 游戏
+  - DOMAIN-KEYWORD,horizon,🎮 游戏
   - DOMAIN-SUFFIX,localhost,DIRECT
   - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
   - RULE-SET,geosite-category-ads-all,REJECT
