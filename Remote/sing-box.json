@@ -123,31 +123,65 @@
       "tag": "🚀 节点选择",
       "type": "selector",
       "outbounds": [
-        "🎯 自动选择",
-        "👆🏻 手动选择",
-        "DIRECT"
-      ]
-    },
-    {
-      "tag": "🎯 自动选择",
-      "type": "selector",
-      "outbounds": [
-        "🌏 全部节点",
         "🇭🇰 香港",
         "🇺🇸 美国",
         "🇯🇵 日本",
         "🇰🇷 韩国",
         "🇸🇬 新加坡",
-        "🇨🇳 台湾"
+        "🇨🇳 台湾",
+        "其它",
+        "DIRECT"
       ]
     },
     {
-      "tag": "👆🏻 手动选择",
+      "tag": "🇭🇰 香港",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 香港 🎯"
+      ]
+    },
+    {
+      "tag": "🇺🇸 美国",
+      "type": "selector",
+      "outbounds": [
+        "🇺🇸 美国 🎯"
+      ]
+    },
+    {
+      "tag": "🇯🇵 日本",
+      "type": "selector",
+      "outbounds": [
+        "🇯🇵 日本 🎯"
+      ]
+    },
+    {
+      "tag": "🇰🇷 韩国",
+      "type": "selector",
+      "outbounds": [
+        "🇰🇷 韩国 🎯"
+      ]
+    },
+    {
+      "tag": "🇸🇬 新加坡",
+      "type": "selector",
+      "outbounds": [
+        "🇸🇬 新加坡 🎯"
+      ]
+    },
+    {
+      "tag": "🇨🇳 台湾",
+      "type": "selector",
+      "outbounds": [
+        "🇨🇳 台湾 🎯"
+      ]
+    },
+    {
+      "tag": "其它",
       "type": "selector",
       "outbounds": []
     },
     {
-      "tag": "🌏 全部节点",
+      "tag": "🇭🇰 香港 🎯",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
@@ -155,7 +189,7 @@
       "tolerance": 50
     },
     {
-      "tag": "🇭🇰 香港",
+      "tag": "🇺🇸 美国 🎯",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
@@ -163,7 +197,7 @@
       "tolerance": 50
     },
     {
-      "tag": "🇺🇸 美国",
+      "tag": "🇯🇵 日本 🎯",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
@@ -171,7 +205,7 @@
       "tolerance": 50
     },
     {
-      "tag": "🇯🇵 日本",
+      "tag": "🇰🇷 韩国 🎯",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
@@ -179,7 +213,7 @@
       "tolerance": 50
     },
     {
-      "tag": "🇰🇷 韩国",
+      "tag": "🇸🇬 新加坡 🎯",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
@@ -187,15 +221,7 @@
       "tolerance": 50
     },
     {
-      "tag": "🇸🇬 新加坡",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "300s",
-      "tolerance": 50
-    },
-    {
-      "tag": "🇨🇳 台湾",
+      "tag": "🇨🇳 台湾 🎯",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
