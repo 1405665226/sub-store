@@ -250,6 +250,8 @@ rules:
   - RULE-SET,steam@cn,DIRECT
   - RULE-SET,xbox,🎮 游戏
   - RULE-SET,xbox@cn,DIRECT
+  - RULE-SET,microsoft,🚀 节点选择
+  - RULE-SET,microsoft@cn,DIRECT
   - RULE-SET,ea,🎮 游戏
   - RULE-SET,playstation,🎮 游戏
   - RULE-SET,epicgames,🎮 游戏
@@ -339,6 +341,18 @@ rule-providers:
     behavior: domain
     interval: 86400
     url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/xbox@cn.mrs"
+    format: mrs
+  microsoft:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs"
+    format: mrs
+  microsoft@cn:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft@cn.mrs"
     format: mrs
   ea:
     type: http
