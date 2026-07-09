@@ -239,17 +239,25 @@ rules:
   - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
   - DOMAIN-SUFFIX,msftncsi.com,DIRECT
   - DOMAIN-SUFFIX,ts.net,DIRECT
-  - DOMAIN-KEYWORD,steam,🎮 游戏
-  - DOMAIN-KEYWORD,xbox,🎮 游戏
+  - RULE-SET,geosite-category-games,🎮 游戏
+  - RULE-SET,geosite-category-games-!cn,🎮 游戏
+  - RULE-SET,geosite-category-games@cn,🎮 游戏
+  - RULE-SET,steam,🎮 游戏
+  - RULE-SET,steam@cn,🎮 游戏
+  - RULE-SET,ea,🎮 游戏
+  - RULE-SET,xbox,🎮 游戏
+  - RULE-SET,xbox@cn,🎮 游戏
+  - RULE-SET,epicgames,🎮 游戏
+  - RULE-SET,epicgames@cn,🎮 游戏
+  - RULE-SET,blizzard,🎮 游戏
+  - RULE-SET,playstation,🎮 游戏
   - DOMAIN-KEYWORD,nvidia,DIRECT
   - DOMAIN-SUFFIX,localhost,DIRECT
   - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
   - RULE-SET,geosite-category-ads-all,REJECT
-  - RULE-SET,direct,DIRECT
   - RULE-SET,geosite-cn,DIRECT
   - RULE-SET,geoip-cn,DIRECT
   - RULE-SET,geosite-geolocation-!cn,🚀 节点选择
-  - RULE-SET,proxy,🚀 节点选择
   - MATCH,🚀 节点选择
 
 rule-providers:
@@ -265,11 +273,6 @@ rule-providers:
     interval: 86400
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"
     format: mrs
-  direct:
-    type: http
-    behavior: domain
-    interval: 86400
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
   geoip-cn:
     type: http
     behavior: ipcidr
@@ -282,8 +285,75 @@ rule-providers:
     interval: 86400
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"
     format: mrs
-  proxy:
+  geosite-category-games:
     type: http
     behavior: domain
     interval: 86400
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-games.mrs"
+    format: mrs
+  geosite-category-games-!cn:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-games-!cn.mrs"
+    format: mrs
+  geosite-category-games@cn:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-games@cn.mrs"
+    format: mrs
+  steam:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam.mrs"
+    format: mrs
+  steam@cn:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam@cn.mrs"
+    format: mrs
+  ea:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/ea.mrs"
+    format: mrs
+  xbox:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/xbox.mrs"
+    format: mrs
+  xbox@cn:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/xbox@cn.mrs"
+    format: mrs
+  epicgames:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/epicgames.mrs"
+    format: mrs
+  epicgames@cn:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/epicgames@cn.mrs"
+    format: mrs
+  blizzard:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/blizzard.mrs"
+    format: mrs
+  playstation:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/playstation.mrs"
+    format: mrs
