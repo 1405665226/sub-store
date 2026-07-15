@@ -60,13 +60,7 @@
         "server": "Google"
       },
       {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "rule_set": "geosite-cn"
-          }
-        ],
+        "rule_set": "geosite-cn",
         "server": "Ali"
       },
       {
