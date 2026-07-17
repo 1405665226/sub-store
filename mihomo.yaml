@@ -115,12 +115,12 @@ proxy-groups:
   - {
       name: 🚀 节点选择,
       type: select,
-      proxies: [🇭🇰 香港, 🇺🇸 美国, 🇯🇵 日本, 🇰🇷 韩国, 🇸🇬 新加坡, 🇨🇳 台湾, 其它, DIRECT]
+      proxies: [🇭🇰 香港, 🇺🇸 美国, 🇯🇵 日本, 🇰🇷 韩国, 🇸🇬 新加坡, 🇨🇳 台湾, DIRECT]
     }
   - {
       name: 🎮 游戏,
       type: select,
-      proxies: [🇭🇰 香港, 🇺🇸 美国, 🇯🇵 日本, 🇰🇷 韩国, 🇸🇬 新加坡, 🇨🇳 台湾, 其它, DIRECT]
+      proxies: [🇭🇰 香港, 🇺🇸 美国, 🇯🇵 日本, 🇰🇷 韩国, 🇸🇬 新加坡, 🇨🇳 台湾, DIRECT]
     }
   - {
       name: 🇭🇰 香港,
@@ -163,12 +163,6 @@ proxy-groups:
       proxies: [🇨🇳 台湾 🎯],
       include-all: true,
       filter: "台湾"
-    }
-  - {
-      name: 其它,
-      type: select,
-      include-all: true,
-      exclude-filter: "香港|美国|日本|韩国|新加坡|台湾"
     }
   - {
       name: 🇭🇰 香港 🎯,
