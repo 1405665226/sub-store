@@ -191,7 +191,6 @@ rules:
   - RULE-SET,nvidia,DIRECT
   - RULE-SET,steam,🎮 游戏
   - RULE-SET,xbox,🎮 游戏
-  - RULE-SET,microsoft,🎮 游戏
   - RULE-SET,ea,🎮 游戏
   - RULE-SET,epicgames,🎮 游戏
   - RULE-SET,geosite-category-ads-all,REJECT
@@ -248,12 +247,6 @@ rule-providers:
     behavior: domain
     interval: 86400
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/xbox.mrs"
-    format: mrs
-  microsoft:
-    type: http
-    behavior: domain
-    interval: 86400
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/microsoft.mrs"
     format: mrs
   ea:
     type: http
