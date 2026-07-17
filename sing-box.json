@@ -71,7 +71,7 @@
       },
       {
         "type": "logical",
-        "mode": "or",
+        "mode": "and",
         "rules": [
           {
             "query_type": [
@@ -86,7 +86,7 @@
         "server": "fakeip"
       }
     ],
-    "final": "fakeip",
+    "final": "Google",
     "strategy": "prefer_ipv4"
   },
   "inbounds": [
@@ -328,6 +328,9 @@
             "rule_set": "xbox"
           },
           {
+            "rule_set": "microsoft"
+          },
+          {
             "rule_set": "ea"
           },
           {
@@ -342,9 +345,6 @@
         "rules": [
           {
             "rule_set": "geosite-geolocation-!cn"
-          },
-          {
-            "rule_set": "microsoft"
           }
         ],
         "outbound": "🚀 节点选择"
