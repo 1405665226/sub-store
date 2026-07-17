@@ -309,28 +309,7 @@
             "rule_set": "geoip-cn"
           },
           {
-            "rule_set": "geosite-category-games@cn"
-          },
-          {
-            "rule_set": "geosite-category-games-!cn@cn"
-          },
-          {
             "rule_set": "nvidia"
-          },
-          {
-            "rule_set": "nvidia@cn"
-          },
-          {
-            "rule_set": "steam@cn"
-          },
-          {
-            "rule_set": "xbox@cn"
-          },
-          {
-            "rule_set": "microsoft@cn"
-          },
-          {
-            "rule_set": "epicgames@cn"
           }
         ],
         "outbound": "DIRECT"
@@ -343,16 +322,10 @@
             "rule_set": "geosite-category-games"
           },
           {
-            "rule_set": "geosite-category-games-!cn"
-          },
-          {
             "rule_set": "steam"
           },
           {
             "rule_set": "xbox"
-          },
-          {
-            "rule_set": "microsoft"
           },
           {
             "rule_set": "ea"
@@ -364,7 +337,16 @@
         "outbound": "🎮 游戏"
       },
       {
-        "rule_set": "geosite-geolocation-!cn",
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "rule_set": "geosite-geolocation-!cn"
+          },
+          {
+            "rule_set": "microsoft"
+          }
+        ],
         "outbound": "🚀 节点选择"
       }
     ],
@@ -400,33 +382,9 @@
         "format": "binary"
       },
       {
-        "tag": "geosite-category-games@cn",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/category-games@cn.srs",
-        "format": "binary"
-      },
-      {
-        "tag": "geosite-category-games-!cn",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/category-games-!cn.srs",
-        "format": "binary"
-      },
-      {
-        "tag": "geosite-category-games-!cn@cn",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/category-games-!cn@cn.srs",
-        "format": "binary"
-      },
-      {
         "tag": "nvidia",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/nvidia.srs",
-        "format": "binary"
-      },
-      {
-        "tag": "nvidia@cn",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/nvidia@cn.srs",
         "format": "binary"
       },
       {
@@ -436,33 +394,15 @@
         "format": "binary"
       },
       {
-        "tag": "steam@cn",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/steam@cn.srs",
-        "format": "binary"
-      },
-      {
         "tag": "xbox",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/xbox.srs",
         "format": "binary"
       },
       {
-        "tag": "xbox@cn",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/xbox@cn.srs",
-        "format": "binary"
-      },
-      {
         "tag": "microsoft",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/microsoft.srs",
-        "format": "binary"
-      },
-      {
-        "tag": "microsoft@cn",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/microsoft@cn.srs",
         "format": "binary"
       },
       {
@@ -475,12 +415,6 @@
         "tag": "epicgames",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/epicgames.srs",
-        "format": "binary"
-      },
-      {
-        "tag": "epicgames@cn",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/epicgames@cn.srs",
         "format": "binary"
       }
     ]
