@@ -112,76 +112,67 @@ dns:
       - 119.29.29.29
 
 proxy-groups:
-  - {
-      name: 🚀 节点选择,
-      type: select,
-      proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾, DIRECT]
-    }
-  - {
-      name: 🎮 游戏,
-      type: select,
-      proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾, DIRECT]
-    }
-  - {
-      name: 🇭🇰 香港,
-      type: url-test,
-      url: https://www.gstatic.com/generate_204,
-      interval: 300,
-      tolerance: 50,
-      include-all: true,
-      filter: "香港",
-      hidden: true
-    }
-  - {
-      name: 🇺🇸 美国,
-      type: url-test,
-      url: https://www.gstatic.com/generate_204,
-      interval: 300,
-      tolerance: 50,
-      include-all: true,
-      filter: "美国",
-      hidden: true
-    }
-  - {
-      name: 🇸🇬 新加坡,
-      type: url-test,
-      url: https://www.gstatic.com/generate_204,
-      interval: 300,
-      tolerance: 50,
-      include-all: true,
-      filter: "新加坡",
-      hidden: true
-    }
-  - {
-      name: 🇯🇵 日本,
-      type: url-test,
-      url: https://www.gstatic.com/generate_204,
-      interval: 300,
-      tolerance: 50,
-      include-all: true,
-      filter: "日本",
-      hidden: true
-    }
-  - {
-      name: 🇰🇷 韩国,
-      type: url-test,
-      url: https://www.gstatic.com/generate_204,
-      interval: 300,
-      tolerance: 50,
-      include-all: true,
-      filter: "韩国",
-      hidden: true
-    }
-  - {
-      name: 🇨🇳 台湾,
-      type: url-test,
-      url: https://www.gstatic.com/generate_204,
-      interval: 300,
-      tolerance: 50,
-      include-all: true,
-      filter: "台湾",
-      hidden: true
-    }
+  - name: 🚀 节点选择
+    type: select
+    proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾, DIRECT]
+
+  - name: 🎮 游戏
+    type: select
+    proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾, DIRECT]
+
+  - name: 🇭🇰 香港
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all: true
+    filter: "香港"
+    hidden: true
+
+  - name: 🇺🇸 美国
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all: true
+    filter: "美国"
+    hidden: true
+
+  - name: 🇸🇬 新加坡
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all: true
+    filter: "新加坡"
+    hidden: true
+
+  - name: 🇯🇵 日本
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all: true
+    filter: "日本"
+    hidden: true
+
+  - name: 🇰🇷 韩国
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all: true
+    filter: "韩国"
+    hidden: true
+
+  - name: 🇨🇳 台湾
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all: true
+    filter: "台湾"
+    hidden: true
 
 rules:
   - IP-CIDR,10.0.0.0/8,DIRECT
