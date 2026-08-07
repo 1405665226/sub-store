@@ -115,6 +115,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾, DIRECT]
+    include-all: true
 
   - name: 🎮 游戏
     type: select
