@@ -79,23 +79,6 @@ dns:
   nameserver:
     - "https://dns.alidns.com/dns-query"
     - "https://doh.pub/dns-query"
-  proxy-server-nameserver:
-    - "https://dns.alidns.com/dns-query"
-    - "https://doh.pub/dns-query"
-  fallback:
-    - "https://dns.google/dns-query"
-    - "https://dns.cloudflare.com/dns-query"
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    geosite:
-      - gfw
-    ipcidr:
-      - 240.0.0.0/4
-    domain:
-      - '+.google.com'
-      - '+.facebook.com'
-      - '+.youtube.com'
   nameserver-policy:
     "rule-set:geosite-cn":
       - "https://dns.alidns.com/dns-query"
