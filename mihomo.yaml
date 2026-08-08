@@ -53,6 +53,7 @@ dns:
   ipv6: false
   use-hosts: true
   respect-rules: true
+  cache-algorithm: arc
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter-mode: blacklist
@@ -60,6 +61,8 @@ dns:
     - "+.lan"
     - "+.local"
     - "+.localhost"
+    - "+.home.arpa"
+    - "+.router"
     - '+.msftconnecttest.com'
     - '+.msftncsi.com'
     - '+.ts.net'
