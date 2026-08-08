@@ -157,17 +157,12 @@ proxy-groups:
     hidden: true
 
 rules:
-  - IP-CIDR,10.0.0.0/8,DIRECT
-  - IP-CIDR,192.168.0.0/16,DIRECT
-  - IP-CIDR,172.16.0.0/12,DIRECT
-  - IP-CIDR,100.64.0.0/10,DIRECT
+  - RULE-SET,geosite-private,DIRECT
+  - RULE-SET,geoip-private,DIRECT
   - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
   - DOMAIN-SUFFIX,msftncsi.com,DIRECT
   - DOMAIN-SUFFIX,ts.net,DIRECT
-  - DOMAIN-SUFFIX,localhost,DIRECT
   - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
-  - RULE-SET,geosite-private,DIRECT
-  - RULE-SET,geoip-private,DIRECT
   - RULE-SET,geosite-category-games,🎮 游戏
   - RULE-SET,nvidia,DIRECT
   - RULE-SET,steam,🎮 游戏
@@ -189,7 +184,7 @@ rule-providers:
     format: mrs
   geoip-private:
     type: http
-    behavior: domain
+    behavior: ipcidr
     interval: 86400
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/private.mrs"
     format: mrs
