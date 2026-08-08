@@ -166,6 +166,8 @@ rules:
   - DOMAIN-SUFFIX,ts.net,DIRECT
   - DOMAIN-SUFFIX,localhost,DIRECT
   - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
+  - RULE-SET,geosite-private,DIRECT
+  - RULE-SET,geoip-private,DIRECT
   - RULE-SET,geosite-category-games,🎮 游戏
   - RULE-SET,nvidia,DIRECT
   - RULE-SET,steam,🎮 游戏
@@ -179,6 +181,18 @@ rules:
   - MATCH,🚀 节点选择
 
 rule-providers:
+  geosite-private:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/private.mrs"
+    format: mrs
+  geoip-private:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/private.mrs"
+    format: mrs
   geosite-category-ads-all:
     type: http
     behavior: domain
