@@ -41,15 +41,12 @@ tun:
   auto-detect-interface: true
   route-address:
     - 0.0.0.0/0
-    - ::/0
   route-exclude-address:
     - 192.168.0.0/16
     - 10.0.0.0/8
     - 172.16.0.0/12
     - 127.0.0.0/8
     - 100.64.0.0/10
-    - "fc00::/7"
-    - "fe80::/10"
 
 dns:
   enable: true
