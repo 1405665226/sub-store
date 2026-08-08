@@ -65,7 +65,6 @@ dns:
     - "+.router"
     - '+.msftconnecttest.com'
     - '+.msftncsi.com'
-    - '+.ts.net'
     - "+.steamserver.net"
     - "+.steamcontent.com"
     - "+.steamcommunity.com"
@@ -161,7 +160,6 @@ rules:
   - RULE-SET,geoip-private,DIRECT
   - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
   - DOMAIN-SUFFIX,msftncsi.com,DIRECT
-  - DOMAIN-SUFFIX,ts.net,DIRECT
   - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
   - RULE-SET,geosite-category-games,🎮 游戏
   - RULE-SET,nvidia,DIRECT
