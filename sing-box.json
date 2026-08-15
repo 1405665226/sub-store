@@ -261,6 +261,12 @@
         "mode": "or",
         "rules": [
           {
+            "rule_set": "geosite-private"
+          },
+          {
+            "rule_set": "geoip-private"
+          },
+          {
             "rule_set": "geosite-cn"
           },
           {
