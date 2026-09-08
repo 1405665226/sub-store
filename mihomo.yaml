@@ -185,7 +185,7 @@ proxy-groups:
     include-all: true
     filter: "台湾"
 
-  - name: 🇨🇳 台湾
+  - name: 🇨🇳
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
