@@ -107,7 +107,7 @@ proxy-groups:
   - name: 🎬 流媒体
     type: url-test
     url: https://www.gstatic.com/generate_204
-    interval: 300
+    interval: 120
     tolerance: 100
     include-all: true
     filter: "Mitce"
