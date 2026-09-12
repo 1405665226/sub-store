@@ -104,6 +104,10 @@ proxy-groups:
     type: select
     proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾, DIRECT]
 
+  - name: 🎬 流媒体
+    type: select
+    proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾, DIRECT]
+
   - name: 🇭🇰 香港
     type: select
     proxies: [🇭🇰]
@@ -206,6 +210,9 @@ rules:
   - RULE-SET,xbox,🎮 游戏
   - RULE-SET,ea,🎮 游戏
   - RULE-SET,epicgames,🎮 游戏
+  - DOMAIN-SUFFIX,stripchat.com,🎬 流媒体
+  - DOMAIN-SUFFIX,doppiocdn.net,🎬 流媒体
+  - DOMAIN-SUFFIX,doppiostreams.com,🎬 流媒体
   - RULE-SET,geosite-category-ads-all,REJECT
   - RULE-SET,geosite-cn,DIRECT
   - RULE-SET,geoip-cn,DIRECT
