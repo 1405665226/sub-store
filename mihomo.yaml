@@ -105,8 +105,13 @@ proxy-groups:
     proxies: [🎯 香港, 🎯 美国, 🎯 新加坡, 🎯 日本, 🎯 韩国, 🎯 台湾, DIRECT]
 
   - name: 🎬 流媒体
-    type: select
-    proxies: [🎯 香港, 🎯 美国, 🎯 新加坡, 🎯 日本, 🎯 韩国, 🎯 台湾, DIRECT]
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all: true
+    filter: "Mitce"
+    hidden: true
 
   - name: 🎯 香港
     type: select
