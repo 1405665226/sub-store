@@ -115,7 +115,7 @@ proxy-groups:
 
   - name: 🎯 香港
     type: select
-    proxies: [🇭🇰]
+    proxies: [🇭🇰 香港]
     include-all: true
     filter: "香港"
 
@@ -130,7 +130,7 @@ proxy-groups:
 
   - name: 🎯 美国
     type: select
-    proxies: [🇺🇸]
+    proxies: [🇺🇸 美国]
     include-all: true
     filter: "美国"
 
@@ -145,7 +145,7 @@ proxy-groups:
 
   - name: 🎯 新加坡
     type: select
-    proxies: [🇸🇬]
+    proxies: [🇸🇬 新加坡]
     include-all: true
     filter: "新加坡"
 
@@ -160,7 +160,7 @@ proxy-groups:
 
   - name: 🎯 日本
     type: select
-    proxies: [🇯🇵]
+    proxies: [🇯🇵 日本]
     include-all: true
     filter: "日本"
 
@@ -175,7 +175,7 @@ proxy-groups:
 
   - name: 🎯 韩国
     type: select
-    proxies: [🇰🇷]
+    proxies: [🇰🇷 韩国]
     include-all: true
     filter: "韩国"
 
@@ -190,7 +190,7 @@ proxy-groups:
 
   - name: 🎯 台湾
     type: select
-    proxies: [🇨🇳]
+    proxies: [🇨🇳 台湾]
     include-all: true
     filter: "台湾"
 
