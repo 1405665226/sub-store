@@ -96,25 +96,25 @@ dns:
       - 119.29.29.29
 
 proxy-groups:
-  - name: 🚀 节点选择
+  - name: 🚀 代理
     type: select
-    proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾, DIRECT]
+    proxies: [🎯 香港, 🎯 美国, 🎯 新加坡, 🎯 日本, 🎯 韩国, 🎯 台湾, DIRECT]
 
   - name: 🎮 游戏
     type: select
-    proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾, DIRECT]
+    proxies: [🎯 香港, 🎯 美国, 🎯 新加坡, 🎯 日本, 🎯 韩国, 🎯 台湾, DIRECT]
 
   - name: 🎬 流媒体
     type: select
-    proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾, DIRECT]
+    proxies: [🎯 香港, 🎯 美国, 🎯 新加坡, 🎯 日本, 🎯 韩国, 🎯 台湾, DIRECT]
 
-  - name: 🇭🇰 香港
+  - name: 🎯 香港
     type: select
     proxies: [🇭🇰]
     include-all: true
     filter: "香港"
 
-  - name: 🇭🇰
+  - name: 🇭🇰 香港
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -123,13 +123,13 @@ proxy-groups:
     filter: "香港"
     hidden: true
 
-  - name: 🇺🇸 美国
+  - name: 🎯 美国
     type: select
     proxies: [🇺🇸]
     include-all: true
     filter: "美国"
 
-  - name: 🇺🇸
+  - name: 🇺🇸 美国
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -138,13 +138,13 @@ proxy-groups:
     filter: "美国"
     hidden: true
 
-  - name: 🇸🇬 新加坡
+  - name: 🎯 新加坡
     type: select
     proxies: [🇸🇬]
     include-all: true
     filter: "新加坡"
 
-  - name: 🇸🇬
+  - name: 🇸🇬 新加坡
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -153,13 +153,13 @@ proxy-groups:
     filter: "新加坡"
     hidden: true
 
-  - name: 🇯🇵 日本
+  - name: 🎯 日本
     type: select
     proxies: [🇯🇵]
     include-all: true
     filter: "日本"
 
-  - name: 🇯🇵
+  - name: 🇯🇵 日本
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -168,13 +168,13 @@ proxy-groups:
     filter: "日本"
     hidden: true
 
-  - name: 🇰🇷 韩国
+  - name: 🎯 韩国
     type: select
     proxies: [🇰🇷]
     include-all: true
     filter: "韩国"
 
-  - name: 🇰🇷
+  - name: 🇰🇷 韩国
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -183,13 +183,13 @@ proxy-groups:
     filter: "韩国"
     hidden: true
 
-  - name: 🇨🇳 台湾
+  - name: 🎯 台湾
     type: select
     proxies: [🇨🇳]
     include-all: true
     filter: "台湾"
 
-  - name: 🇨🇳
+  - name: 🇨🇳 台湾
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -203,7 +203,7 @@ rules:
   - RULE-SET,geoip-private,DIRECT
   - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
   - DOMAIN-SUFFIX,msftncsi.com,DIRECT
-  - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
+  - DOMAIN-SUFFIX,googleapis.cn,🚀 代理
   - RULE-SET,geosite-category-games,🎮 游戏
   - RULE-SET,nvidia,DIRECT
   - RULE-SET,steam,🎮 游戏
@@ -216,8 +216,8 @@ rules:
   - RULE-SET,geosite-category-ads-all,REJECT
   - RULE-SET,geosite-cn,DIRECT
   - RULE-SET,geoip-cn,DIRECT
-  - RULE-SET,geosite-geolocation-!cn,🚀 节点选择
-  - MATCH,🚀 节点选择
+  - RULE-SET,geosite-geolocation-!cn,🚀 代理
+  - MATCH,🚀 代理
 
 rule-providers:
   geosite-private:
