@@ -1,1 +1,3 @@
-
+payload:
+    - +.msftconnecttest.com
+    - +.msftncsi.com
