@@ -206,18 +206,15 @@ proxy-groups:
 rules:
   - RULE-SET,geosite-private,DIRECT
   - RULE-SET,geoip-private,DIRECT
-  - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
-  - DOMAIN-SUFFIX,msftncsi.com,DIRECT
-  - DOMAIN-SUFFIX,googleapis.cn,🚀 代理
   - RULE-SET,geosite-category-games,🎮 游戏
   - RULE-SET,nvidia,DIRECT
   - RULE-SET,steam,🎮 游戏
   - RULE-SET,xbox,🎮 游戏
   - RULE-SET,ea,🎮 游戏
   - RULE-SET,epicgames,🎮 游戏
-  - DOMAIN-SUFFIX,stripchat.com,🎬 流媒体
-  - DOMAIN-SUFFIX,doppiocdn.net,🎬 流媒体
-  - DOMAIN-SUFFIX,doppiostreams.com,🎬 流媒体
+  - RULE-SET,custom_direct,DIRECT
+  - RULE-SET,custom_proxy,🚀 代理
+  - RULE-SET,18,🎬 流媒体
   - RULE-SET,geosite-category-ads-all,REJECT
   - RULE-SET,geosite-cn,DIRECT
   - RULE-SET,geoip-cn,DIRECT
@@ -225,6 +222,24 @@ rules:
   - MATCH,🚀 代理
 
 rule-providers:
+  custom_direct:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://raw.githubusercontent.com/1405665226/sub-store/refs/heads/main/rules/custom_direct.yaml"
+    format: yaml
+  custom_proxy:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://raw.githubusercontent.com/1405665226/sub-store/refs/heads/main/rules/custom_proxy.yaml"
+    format: yaml
+  18:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://raw.githubusercontent.com/1405665226/sub-store/refs/heads/main/rules/18.yaml"
+    format: yaml
   geosite-private:
     type: http
     behavior: domain
