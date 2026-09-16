@@ -106,11 +106,11 @@ proxy-groups:
 
   - name: 🇭🇰 香港
     type: select
-    proxies: [🇭🇰 url-test]
+    proxies: [🇭🇰]
     include-all: true
     filter: "香港"
 
-  - name: 🇭🇰 url-test
+  - name: 🇭🇰
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -121,11 +121,11 @@ proxy-groups:
 
   - name: 🇺🇸 美国
     type: select
-    proxies: [🇺🇸 url-test]
+    proxies: [🇺🇸]
     include-all: true
     filter: "美国"
 
-  - name: 🇺🇸 url-test
+  - name: 🇺🇸
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -136,11 +136,11 @@ proxy-groups:
 
   - name: 🇸🇬 新加坡
     type: select
-    proxies: [🇸🇬 url-test]
+    proxies: [🇸🇬]
     include-all: true
     filter: "新加坡"
 
-  - name: 🇸🇬 url-test
+  - name: 🇸🇬
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -151,11 +151,11 @@ proxy-groups:
 
   - name: 🇯🇵 日本
     type: select
-    proxies: [🇯🇵 url-test]
+    proxies: [🇯🇵]
     include-all: true
     filter: "日本"
 
-  - name: 🇯🇵 url-test
+  - name: 🇯🇵
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -166,11 +166,11 @@ proxy-groups:
 
   - name: 🇰🇷 韩国
     type: select
-    proxies: [🇰🇷 url-test]
+    proxies: [🇰🇷]
     include-all: true
     filter: "韩国"
 
-  - name: 🇰🇷 url-test
+  - name: 🇰🇷
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -181,11 +181,11 @@ proxy-groups:
 
   - name: 🇨🇳 台湾
     type: select
-    proxies: [🇨🇳 url-test]
+    proxies: [🇨🇳]
     include-all: true
     filter: "台湾"
 
-  - name: 🇨🇳 url-test
+  - name: 🇨🇳
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
