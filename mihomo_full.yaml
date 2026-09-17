@@ -99,46 +99,42 @@ proxy-groups:
   - name: 🚀 代理
     type: select
     proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾, DIRECT]
-    include-all: true
 
   - name: 🎮 游戏
     type: select
     proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾, DIRECT]
-    include-all: true
 
   - name: 💡 AI
     type: select
     proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡]
-    include-all: true
-    filter: "香港|美国|新加坡"
 
   - name: 🔴 YouTube
     type: select
     proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾]
-    include-all: true
 
   - name: 𝕏 Twitter
     type: select
     proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾]
-    include-all: true
 
   - name: 💬 Telegram
     type: select
     proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾]
-    include-all: true
 
   - name: 🎬 Netflix
     type: select
     proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本]
-    include-all: true
 
   - name: 🔞 成人
     type: select
     proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本]
-    include-all: true
-    filter: "备用"
 
   - name: 🇭🇰 香港
+    type: select
+    proxies: [🇭🇰]
+    include-all: true
+    filter: "香港"
+
+  - name: 🇭🇰
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -148,6 +144,12 @@ proxy-groups:
     hidden: true
 
   - name: 🇺🇸 美国
+    type: select
+    proxies: [🇺🇸]
+    include-all: true
+    filter: "美国"
+
+  - name: 🇺🇸
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -157,6 +159,12 @@ proxy-groups:
     hidden: true
 
   - name: 🇸🇬 新加坡
+    type: select
+    proxies: [🇸🇬]
+    include-all: true
+    filter: "新加坡"
+
+  - name: 🇸🇬
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -166,6 +174,12 @@ proxy-groups:
     hidden: true
 
   - name: 🇯🇵 日本
+    type: select
+    proxies: [🇯🇵]
+    include-all: true
+    filter: "日本"
+
+  - name: 🇯🇵
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -175,6 +189,12 @@ proxy-groups:
     hidden: true
 
   - name: 🇰🇷 韩国
+    type: select
+    proxies: [🇰🇷]
+    include-all: true
+    filter: "韩国"
+
+  - name: 🇰🇷
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -184,6 +204,12 @@ proxy-groups:
     hidden: true
 
   - name: 🇨🇳 台湾
+    type: select
+    proxies: [🇨🇳]
+    include-all: true
+    filter: "台湾"
+
+  - name: 🇨🇳
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
