@@ -212,18 +212,6 @@ rules:
   - MATCH,🚀 代理
 
 rule-providers:
-  custom_direct:
-    type: http
-    behavior: domain
-    interval: 86400
-    url: "https://raw.githubusercontent.com/1405665226/sub-store/refs/heads/main/rules/custom_direct.yaml"
-    format: yaml
-  custom_proxy:
-    type: http
-    behavior: domain
-    interval: 86400
-    url: "https://raw.githubusercontent.com/1405665226/sub-store/refs/heads/main/rules/custom_proxy.yaml"
-    format: yaml
   geosite-private:
     type: http
     behavior: domain
@@ -296,3 +284,15 @@ rule-providers:
     interval: 86400
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/epicgames.mrs"
     format: mrs
+  custom_direct:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://raw.githubusercontent.com/1405665226/sub-store/refs/heads/main/rules/custom_direct.yaml"
+    format: yaml
+  custom_proxy:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://raw.githubusercontent.com/1405665226/sub-store/refs/heads/main/rules/custom_proxy.yaml"
+    format: yaml
