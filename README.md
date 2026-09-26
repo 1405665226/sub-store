@@ -1,5 +1,4 @@
-https://raw.githubusercontent.com/Keywos/rule/main/rename.js
-
+https://raw.githubusercontent.com/Keywos/rule/refs/heads/main/rename.js
     name=
     out=clear
 
