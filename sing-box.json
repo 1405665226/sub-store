@@ -93,7 +93,7 @@
     {
       "tag": "tun",
       "type": "tun",
-      "stack": "mixed",
+      "stack": "system",
       "mtu": 1500,
       "auto_route": true,
       "strict_route": true,
