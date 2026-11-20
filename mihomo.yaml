@@ -109,9 +109,8 @@ proxy-groups:
 
   - name: 💬 AI
     type: select
-    proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡]
+    proxies: [🇭🇰 香港, 🇺🇸 美国, 🇸🇬 新加坡, 🇯🇵 日本, 🇰🇷 韩国, 🇨🇳 台湾, DIRECT]
     include-all: true
-    filter: "香港|美国|新加坡"
 
   - name: 🇭🇰 香港
     type: url-test
